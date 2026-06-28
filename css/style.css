@@ -1,1 +1,305 @@
-/* code here */
+/* style.css - Universitas Ternama Landing Page Penerimaan Mahasiswa */
+/* ---------- HEADER ---------- */
+[class="header"], header {
+  background: linear-gradient(135deg, #1a3a6e 0%, #0d2045 100%);
+  color: #ffffff;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-height: 70px;
+}
+
+[class="header"] h1, header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  padding: 1rem 0;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* ---------- MAIN PAGES---------- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+/* ---------- SECTION UTAMA---------- */
+main > section:first-child {
+  background: linear-gradient(135deg, #1a3a6e 0%, #2a5298 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 5rem 2rem;
+  border-radius: 0 0 20px 20px;
+  margin: 0 -1.5rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+main > section:first-child::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 250px;
+  height: 250px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 50%;
+}
+
+main > section:first-child::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -40px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+}
+
+main > section:first-child p:first-child {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #90c4ff;
+  margin-bottom: 1rem;
+}
+
+main > section:first-child h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+}
+
+main > section:first-child p:last-child {
+  font-size: 1.05rem;
+  color: #c8dff5;
+  max-width: 620px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- SECTION UMUM ---------- */
+section {
+  margin-bottom: 2.5rem;
+}
+
+section .container,
+section > div {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e8eef6;
+}
+
+section h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1a3a6e;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 3px solid #2a5298;
+  display: inline-block;
+}
+
+section h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- SECTION JALUR PENDAFTARAN ---------- */
+#pendaftaran > div {
+  background: linear-gradient(135deg, #eaf1fb 0%, #f0f5ff 100%);
+  border-left: 5px solid #2a5298;
+}
+
+#pendaftaran h2 {
+  color: #1a3a6e;
+  border-bottom-color: #2a5298;
+}
+
+/* ---------- SECTION PERSYARATAN ---------- */
+#persyaratan ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+#persyaratan ul li {
+  padding: 0.65rem 1rem 0.65rem 2.5rem;
+  background: #f5f9ff;
+  border-radius: 8px;
+  border: 5px solid #dde8f8;
+  font-size: 0.95rem;
+  color: #3a3a3a;
+  position: relative;
+}
+
+#persyaratan ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0.75rem;
+  color: #2a5298;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* ---------- SECTION JADWAL ---------- */
+#jadwal ol {
+  list-style: none;
+  counter-reset: jadwal-counter;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#jadwal ol li {
+  counter-increment: jadwal-counter;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 1.25rem;
+  background: #f5f9ff;
+  border-radius: 8px;
+  border: 5px solid #dde8f8;
+  font-size: 0.95rem;
+  gap: 1rem;
+}
+
+#jadwal ol li::before {
+  content: counter(jadwal-counter);
+  min-width: 28px;
+  height: 28px;
+  background: #2a5298;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+#jadwal ol li strong {
+  color: #1a3a6e;
+  font-weight: 700;
+  background: #ddeeff;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+/* ---------- SECTION BIAYA ---------- */
+#biaya .container > h3 {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+  margin-top: -0.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  border: 2px solid #1a3a6e;
+}
+
+table thead tr,
+table tr:first-child {
+  background: #1a3a6e;
+}
+
+table th {
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  font-size: 0.9rem;
+  color: #ffffff;      
+  background: #1a3a6e;
+  border: 2px solid #1a3a6e;
+}
+
+table td {
+  padding: 0.85rem 1.2rem;
+  border: 2px solid #1a3a6e;
+  color: #3a3a3a;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f5f9ff;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+table tbody tr:hover {
+  background-color: #eaf1fb;
+  transition: background-color 0.2s ease;
+}
+
+/* ---------- FOOTER / KONTAK ---------- */
+footer#kontak {
+  background: linear-gradient(135deg, #0d2045 0%, #1a3a6e 100%);
+  color: #c8d8f0;
+  text-align: center;
+  padding: 3rem 2rem;
+  margin: 0 -1.5rem;
+  border-radius: 20px 20px 0 0;
+}
+
+footer#kontak h2 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  border-bottom-color: #90c4ff;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+footer#kontak h2 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer#kontak p {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: #b0c8e8;
+  line-height: 1.8;
+}
+
+footer#kontak p:last-child {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.85rem;
+  color: #7a9cbf;
+}
+
+footer#kontak i {
+  margin-right: 0.4rem;
+  color: #90c4ff;
+}
