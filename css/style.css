@@ -1,4 +1,19 @@
 /* style.css - Universitas Ternama Landing Page Penerimaan Mahasiswa */
+/*------------PENAMBAHAN BASE DAN RESET------------*/
+*::before,
+*::after {
+  box-sizing: border-box; margin: 0; padding: 0;
+}
+html {
+scroll-behavior: smooth;font-size:16px;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2d2d2d;
+  background-color: #aac2e7;
+  line-height: 1.7;
+}
+
 /* ---------- HEADER ---------- */
 [class="header"], header {
   background: linear-gradient(135deg, #1a3a6e 0%, #0d2045 100%);
