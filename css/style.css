@@ -15,30 +15,31 @@ body {
 }
 
 /* ---------- HEADER ---------- */
-[class="header"], header {
+.header {
   background: linear-gradient(135deg, #1a3a6e 0%, #0d2045 100%);
   color: #ffffff;
-  padding: 0 2rem;
-  position: sticky;
-  top: 0;
+  padding: 2rem;
+  position: relative;
   z-index: 1000;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  min-height: 70px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap:nowrap;
+  gap: 0.2rem;
+  max-width: 1100px;
+  margin: 0 auto 2rem auto;
+  max-height: 100px;
+  border-radius: 0 0 20px 20px;
+  flex-direction: column;
 }
 
-[class="header"] h1, header h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
+/*-------- Nav BAR --------*/
+.header nav a, .header.nav-main a {
   color: #ffffff;
-  letter-spacing: 0.5px;
-  padding: 1rem 0;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-}
+  text-decoration: none;
+ }
+
 
 /* ---------- MAIN PAGES---------- */
 main {
@@ -271,11 +272,6 @@ table tbody tr:nth-child(odd) {
   background-color: #ffffff;
 }
 
-table tbody tr:hover {
-  background-color: #eaf1fb;
-  transition: background-color 0.2s ease;
-}
-
 /* ---------- FOOTER / KONTAK ---------- */
 footer#kontak {
   background: linear-gradient(135deg, #0d2045 0%, #1a3a6e 100%);
@@ -303,7 +299,7 @@ footer#kontak p {
   font-size: 0.95rem;
   margin-bottom: 0.5rem;
   color: #b0c8e8;
-  line-height: 1.8;
+  line-height: 1;
 }
 
 footer#kontak p:last-child {
