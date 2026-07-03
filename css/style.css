@@ -59,7 +59,7 @@ main > section:first-child {
 }
 
 main > section:first-child::before {
-  content: '';
+ /* content: '';*/
   position: absolute;
   top: -60px;
   right: -60px;
@@ -70,7 +70,7 @@ main > section:first-child::before {
 }
 
 main > section:first-child::after {
-  content: '';
+ /* content: '';*/
   position: absolute;
   bottom: -80px;
   left: -40px;
